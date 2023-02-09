@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Resume Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <button type="button" class="btn" id="previous">Prev</button>
+            <input type="search" class="search-box" id="search-box" placeholder="search for keywords to filter the results">
+            <button type="button" class="btn" id="next">Next</button>
+        </header>
+        <main id="resume-window" class="resume-window"></main>
+        <div class="resume-number">
+            <p id="current-resume">Showing <b>1</b> of <b>6</b></p>
+        </div>
+    </div>
+
+    <script type="module" src="resume.js"></script>
+
+</body>
+
+</html>

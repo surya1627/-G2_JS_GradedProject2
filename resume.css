@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f7;
+}
+
+.container{
+    width: 40vw;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 6rem 1fr 5rem;
+    place-items: center;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+header .search-box{
+    display: block;
+    width: 25rem;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+header .search-box:focus{
+    box-shadow: inset 3px 3px 8px #c7c4c4, inset -3px -3px 8px #fff;
+}
+
+header .btn{
+    background-color: #eee;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+}
+
+header .btn:hover{
+    background-color: #ddd;
+}
+
+#names{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.resume-number p{
+    font-size: 1.6rem;
+    padding: 5px;
+}
+
+.error-window{
+    display: grid;
+    grid-template-columns: 18rem 1fr;
+    width: 55rem;
+    height: 18rem;
+    margin: auto;
+    padding: 0 5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px #999;
+}
+
+.error-window .error-image{
+    height: 18rem;
+    width: 18rem;
+    background: url("sad_face.png");
+    background-position: center;
+    background-size: contain;
+}
+
+.error-window .error-message{
+    align-self: center;
+}
+
+.error-window .error-message p{
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.resume-window{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #999;
+    overflow-y: scroll;
+}
+
+.resume-window::-webkit-scrollbar{
+    display: none;
+}
+
+.resume-window .resume-head{
+    width: 100%;
+    display: flex;
+    background-color: #c1e6df;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.resume-head .details-box{
+    flex-basis: 60%;
+}
+
+.resume-head .image-box{
+    flex-basis: 20%;
+    display: grid;
+    place-items: center;
+}
+
+.resume-head .image-box .profile{
+    font-size: 7rem;
+}
+
+.resume-head > .details-box > #name{
+    display: block;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 2.5rem auto 2rem;
+}
+
+.resume-head > .details-box > #applied-for{
+    display: block;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.resume-window .resume-body{
+    display: flex;
+}
+
+.resume-body .sidebar{
+    flex-basis: 25%;
+    align-items: stretch;
+    padding: 1rem;
+}
+
+.sidebar .side-info{
+    width: 100%;
+    padding: 1rem;
+    background-color: #ffd7d896;
+}
+
+.resume-body .main-section{
+    flex-basis: 75%;
+    align-items: stretch;
+}
+
+.side-info table{
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.side-info table th{
+    font-size: 1.3rem;
+    padding: 1px 3px;
+    text-align: left;
+    background-color: #aaa;
+}
+
+.side-info table td{
+    font-size: 1.1rem;
+    padding: 0 2px;
+    text-align: right;
+}
+
+.resume-body .main-section section{
+    margin: 1rem 0;
+}
+
+.bio-data h2{
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.bio-data p{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin:  1rem 3rem 0 2rem;
+}
+
+.bio-data ul>li{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin:  0 3rem 0 2rem;
+}
+
+/* ########################################### media queries for responsive design ########################################### */
+
+@media(max-width: 1024px){
+    :root{
+        font-size: 50%;
+    }
+    .container{
+        width: 50vw;
+    }
+    header .btn{
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-height: 550px){
+    :root{
+        font-size: 50%;
+    }
+}
+
+@media(max-width: 660px){
+    :root{
+        font-size: 45%;
+    }
+    .container{
+        width: 70vw;
+    }
+}
